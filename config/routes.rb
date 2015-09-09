@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+   devise_for :users
+devise_scope :user do  
+   get '/users/sign_out' => 'devise/sessions#destroy'     
+end
+ 
   resources :categories
   resources :orders
   resources :books
@@ -9,6 +13,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'books#index'
+  # get 'books/:id/destroy'  => 'books#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -58,4 +63,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+   match ':controller(/:action(/:id))', :via => :get
 end
