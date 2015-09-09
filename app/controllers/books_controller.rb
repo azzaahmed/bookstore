@@ -1,8 +1,16 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 before_action :authenticate_user!
+load_and_authorize_resource
+# load_and_authorize_resource :only => [:index, :show]
   # GET /books
   # GET /books.json
+
+
+
+ #  def search
+ # @books = Book.search(params[:search])
+ #  end
   def index
     @books = Book.all
   end
@@ -10,6 +18,7 @@ before_action :authenticate_user!
   # GET /books/1
   # GET /books/1.json
   def show
+       # @books =Book.search(params[:search]) 
   end
 
   # GET /books/new
