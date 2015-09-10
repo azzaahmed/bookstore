@@ -7,3 +7,11 @@
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
+  <ul>
+         <li> <%= link_to "Home", {:controller => 'categories', :action => 'index'} %> </li>
+       
+    <% get_books.each do |book| %>
+        <li> <%= link_to book.name, book %> </li>
+     
+    <% end %>
+   </ul>

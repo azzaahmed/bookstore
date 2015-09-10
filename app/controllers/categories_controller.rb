@@ -1,6 +1,16 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
+
+
+ def get_books
+
+  @bookk= Book.where(:category_id  => params[:id])
+
+  end
+ helper_method :get_books
+ 
+
   # GET /categories
   # GET /categories.json
   def index
