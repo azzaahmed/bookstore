@@ -6,14 +6,19 @@ load_and_authorize_resource
    # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+     @books = Book.all
+ 
+  if params[:search]
+    @books = Book.search(params[:search]).order("created_at DESC")
+  
+  end
   end
 
   # GET /books/1
   # GET /books/1.json
   def show
-       
   end
+  
 
   # GET /books/new
   def new
