@@ -45,8 +45,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'psych', '~> 2.0.14'
+
+
 gem 'seed_dump', '~> 3.2.2'
 gem 'devise', '~> 3.5.2'
 gem 'cancan', '~> 1.6.10'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sprockets-rails', '~> 2.3.2'
+gem 'acts_as_shopping_cart', '~> 0.2.1'

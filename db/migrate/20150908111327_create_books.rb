@@ -9,6 +9,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :image
 
       t.timestamps null: false
+    
     end
      add_index("books", "category_id")
   end
