@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :order_items
+  resources :order_items
   get 'carts/show'
 resource :cart, only: [:show]
   resources :order_items

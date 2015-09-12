@@ -10,8 +10,8 @@ class CreateOrderItems < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+     add_index("order_items", "order_id")
+     add_index("order_items", "user_id")
      add_index("order_items", "book_id")
-      add_index("order_items", "user_id")
-       add_index("order_items", "order_id")
   end
 end

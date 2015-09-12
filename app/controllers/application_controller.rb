@@ -10,12 +10,6 @@ class ApplicationController < ActionController::Base
   params[resource] &&= send(method) if respond_to?(method, true)
 end
 
-def current_order
-    if !session[:order_id].nil?
-      Order.find(session[:order_id])
-    else
-      Order.new
-    end
-  end
+
 end
 
