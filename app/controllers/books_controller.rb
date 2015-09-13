@@ -2,7 +2,14 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
 load_and_authorize_resource
- 
+
+
+# def cart_create 
+# @cart = Cart.create
+# @book = Book.find(params[:id])
+
+# @cart.add(@book, @book.price,  OrderItem.find(:))
+# end
 
    # GET /books
   # GET /books.json
