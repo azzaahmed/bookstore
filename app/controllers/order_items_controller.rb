@@ -1,8 +1,10 @@
 class OrderItemsController < ApplicationController
   before_action :set_order_item, only: [:show, :edit, :update, :destroy]
-
+ attr_accessor :book_id
   # GET /order_items
   # GET /order_items.json
+
+
   def index
     @order_items = OrderItem.all
   end
@@ -10,10 +12,14 @@ class OrderItemsController < ApplicationController
   # GET /order_items/1
   # GET /order_items/1.json
   def show
+
   end
 
   # GET /order_items/new
-  def new
+  def new 
+
+    @user =current_user
+ @book = Book.find( params[:book_id])
     @order_item = OrderItem.new
   end
 
@@ -24,8 +30,12 @@ class OrderItemsController < ApplicationController
   # POST /order_items
   # POST /order_items.json
   def create
-    @order_item = OrderItem.new(order_item_params)
+      @user =current_user
+    @book = Book.find( order_item_params[:book_id])
 
+     # @order_item = @book.order_items.create(order_item_params)
+     @order_item = OrderItem.new(order_item_params)
+         @order_item.total_price = @order_item.quantity * @order_item.price 
     respond_to do |format|
       if @order_item.save
         format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
@@ -36,6 +46,7 @@ class OrderItemsController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /order_items/1
   # PATCH/PUT /order_items/1.json

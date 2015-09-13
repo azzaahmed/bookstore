@@ -12,7 +12,7 @@
 
 <p>
   <strong>Order:</strong>
-  <%= @order_item.order_id %>
+  <%= @order_item.id %>
 </p>
 
 <p>
@@ -27,7 +27,8 @@
 
 <p>
   <strong>Total price:</strong>
-  <%= @order_item.total_price %>
+  <%= @order_item.total_price  %>
+
 </p>
 
 <%= link_to 'Edit', edit_order_item_path(@order_item) %> |

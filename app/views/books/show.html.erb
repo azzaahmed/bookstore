@@ -30,6 +30,7 @@
   <%= @book.image %>
 </p>
 <% if can? :edit, @book %>
-<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Edit', edit_book_path(@book) %> 
 <% end %>
 <%= link_to 'Back', books_path %>
+<%= link_to 'New Order item', {:controller => 'order_items', :action => 'new', :book_id => @book.id }  %>
