@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   method = "#{resource}_params"
   params[resource] &&= send(method) if respond_to?(method, true)
 end
+  
 
 
 end

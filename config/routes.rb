@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 resources :order_items
-
+resources :carts
    devise_for :users 
   resources :categories 
   resources :books do
