@@ -58,3 +58,13 @@ Category.create!([
   {category_name: "Cultural"},
   {category_name: "Thriller"}
 ])
+OrderStatus.create!([
+  {name: "In Progress"},
+  {name: "Placed"},
+  {name: "Shipped"},
+  {name: "Cancelled"},
+  {name: "In Progress"},
+  {name: "Placed"},
+  {name: "Shipped"},
+  {name: "Cancelled"}
+])

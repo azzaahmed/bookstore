@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
 	belongs_to :category
-	belongs_to :order_item
+	has_many :order_items
   default_scope { where(active: true) }
 def self.search(search)
   

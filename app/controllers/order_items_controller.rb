@@ -4,7 +4,6 @@ class OrderItemsController < ApplicationController
   # GET /order_items
   # GET /order_items.json
 
-
   def index
     @order_items = OrderItem.all
   end
@@ -30,34 +29,24 @@ class OrderItemsController < ApplicationController
   # POST /order_items
   # POST /order_items.json
   def create
- 
-# @cart = Cart.create
 
-      @user =current_user
-    @book = Book.find( order_item_params[:book_id])
-
-     # @order_item = @book.order_items.create(order_item_params)
-     @order_item = OrderItem.new(order_item_params)
-
-         @order_item.total_price = @order_item.quantity * @order_item.price 
-
-    respond_to do |format|
-      if @order_item.save
-        #  @cart=Cart.find(1)
-        # @cart.add(@order_item, @order_item.total_price)
-        format.html { redirect_to @cart, notice: 'Order item was successfully created.' }
-        format.json { render :index, status: :created, location: @cart }
-      else
-        format.html { render :new }
-        format.json { render json: @order_item.errors, status: :unprocessable_entity }
-      end
-    end
+      @order = current_order
+    @order_item = @order.order_items.new(order_item_params)
+    @order.save
+    session[:order_id] = @order.id
   end
 
 
   # PATCH/PUT /order_items/1
   # PATCH/PUT /order_items/1.json
   def update
+
+    @order = current_order
+    @order_item = @order.order_items.find(params[:id])
+    @order_item.update_attributes(order_item_params)
+    @order_items = @order.order_items
+
+
     respond_to do |format|
       if @order_item.update(order_item_params)
         format.html { redirect_to @order_item, notice: 'Order item was successfully updated.' }
@@ -72,7 +61,12 @@ class OrderItemsController < ApplicationController
   # DELETE /order_items/1
   # DELETE /order_items/1.json
   def destroy
+    @order = current_order
+    @order_item = @order.order_items.find(params[:id])
     @order_item.destroy
+    @order_items = @order.order_items
+
+   
     respond_to do |format|
       format.html { redirect_to order_items_url, notice: 'Order item was successfully destroyed.' }
       format.json { head :no_content }

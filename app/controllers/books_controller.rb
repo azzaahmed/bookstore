@@ -1,14 +1,14 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
-load_and_authorize_resource
+# load_and_authorize_resource
 
 
    # GET /books
   # GET /books.json
   def index
      @books = Book.all
-   
+   @order_item = current_order.order_items.new
  
   if params[:search]
     @books = Book.search(params[:search]).order("created_at DESC")
