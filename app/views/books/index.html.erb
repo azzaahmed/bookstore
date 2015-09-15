@@ -30,9 +30,9 @@
         <td><%= book.author %></td>
         <td><%= book.category_id %></td>
         <td><%= book.image %></td>
-          <td><%= link_to 'Add to cart', shopping_cart_path(book) %></td>
-           <td><%= link_to 'cccart',  {:controller => 'shopping_carts', :action => 'create', :book_id =>book.id}  %></td>
-                 <td><%= link_to 'sscart',  {:controller => 'shopping_carts', :action => 'show', :book_id =>book.id}  %></td>
+        <!--   <td><%= link_to 'Add to cart', shopping_cart_path(book) %></td> -->
+   <!--         <td><%= link_to 'cccart',  {:controller => 'shopping_carts', :action => 'create', :book_id =>book.id}  %></td> -->
+                 <td><%= link_to 'Add to cart',  {:controller => 'shopping_carts', :action => 'show', :book_id =>book.id}  %></td>
         <td><%= link_to 'Show', book %></td>  
         <% if can? :new, @book %>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
