@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
 
 resources :order_items
-resources :carts
+ resources :cart
+  resources :shopping_cart_items
+ resources :shopping_carts
+ resources :shopping_cart
    devise_for :users 
   resources :categories 
   resources :books do
-     resources :order_items end
-  resource :cart, only: [:show]
-  
+     resources :order_items
+     resources :cart end
+  # resource :cart, only: [:show]
+  # get 'cart/index' => 'cart#index'
+  # get 'cart/clear' => 'cart#clearCart'
+  # get 'cart/:id' => 'cart#add'
+
 devise_scope :user do
   get 'users/sign_out' => "devise/sessions#destroy"
 end

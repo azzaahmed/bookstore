@@ -45,8 +45,8 @@ class OrderItemsController < ApplicationController
       if @order_item.save
         #  @cart=Cart.find(1)
         # @cart.add(@order_item, @order_item.total_price)
-        format.html { redirect_to @cart, notice: 'Order item was successfully created.' }
-        format.json { render :index, status: :created, location: @cart }
+        format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
+        format.json { render :show, status: :created, location: @order_item }
       else
         format.html { render :new }
         format.json { render json: @order_item.errors, status: :unprocessable_entity }

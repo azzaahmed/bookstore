@@ -1,6 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 
+<h1> your cart </h1>
+<% if @cart.empty? %>
+<p> your cart is empty </p>
+<% else %>
+<%= link_to 'Empty your cart', cart_clear_path %>
+<%end %>
+<br> <br> <br>
+<% total =0 %>
+<ul>
+	<% @cart.each do |id, quantity| %>
+	<% book =Book.find_by_id(id)%>
+	<li>
+		<%= link_to book.name, book %>
+		<p><%= book.description %></p>
+		<p><%= number_to_currency(book.price, :unit => '£') %></p>
+		<p> Quantity:<%= quantity %></p>
+	</li>
+	<% total += quantity * book.price %>
+	<%end%>
+	<p><b><%= number_to_currency(total, :unit => '£') %></b></p>
+</ul>
+<!-- 
 	<head>
 		<title>Shopping Cart</title>
 		<meta charset="UTF-8">
@@ -71,11 +93,7 @@
 
 		
 
-		<!-- The popover content -->
-
 		
-		
-		<!-- JavaScript includes -->
 
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
 		<script src="assets/js/bootstrap.min.js"></script>
@@ -85,3 +103,4 @@
 
 
 	</body>
+ -->
