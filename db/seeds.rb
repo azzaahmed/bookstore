@@ -1,3 +1,7 @@
+User.create!([
+  {email: "a@a.com", encrypted_password: "$2a$10$.PZdD4qQf7Tr4xVw7FmMBeOrxs3T43unzhCpK5rkng6kKWw8hhfiC", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-09-15 18:32:05", last_sign_in_at: "2015-09-15 18:32:05", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: false},
+  {email: "a@ww.com", encrypted_password: "$2a$10$c9thWpxxVbrGvZKOYHU09eq4hIlmoAPtAC.WWfEqjVuB0UdO1I9MG", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-09-15 19:25:05", last_sign_in_at: "2015-09-15 19:25:05", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: false}
+])
 Book.create!([
   {price: nil, description: "", name: "", author: "", category_id: nil, image: "", active: true},
   {price: 70, description: "Anyone who has read J.D. Salinger's New Yorker stories ? particularly A Perfect Day for Bananafish, Uncle Wiggily in Connecticut, The Laughing Man, and For Esme ? With Love and Squalor, will not be surprised by the fact that his first novel is fully of children. The hero-narrator of THE CATCHER IN THE RYE is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it. There are many voices in this novel: children's voices, adult voices, underground voices-but Holden's voice is the most eloquent of all. Transcending his own vernacular, yet remaining marvelously faithful to it, he issues a perfectly articulated cry of mixed pain and pleasure. However, like most lovers and clowns and poets of the higher orders, he keeps most of the pain to, and for, himself. The pleasure he gives away, or sets aside, with all his heart. It is there for the reader who can handle it to keep.", name: "The Catcher in the Rye", author: "J.D. Salinger", category_id: 1, image: "the catcher in the rye.jpg\r", active: true},
@@ -57,4 +61,19 @@ Category.create!([
   {category_name: "Literary"},
   {category_name: "Cultural"},
   {category_name: "Thriller"}
+])
+ShoppingCart.create!([
+  {},
+  {},
+  {},
+  {},
+  {}
+])
+ShoppingCartItem.create!([
+  {owner_id: nil, owner_type: nil, quantity: 4, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 1},
+  {owner_id: nil, owner_type: nil, quantity: 2, item_id: 3, item_type: "Book", price: 90.0, shopping_cart_id: 1},
+  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 11, item_type: "Book", price: 150.0, shopping_cart_id: 1},
+  {owner_id: nil, owner_type: nil, quantity: 4, item_id: 4, item_type: "Book", price: 150.0, shopping_cart_id: 5},
+  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 10, item_type: "Book", price: 55.0, shopping_cart_id: 5},
+  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 9, item_type: "Book", price: 80.0, shopping_cart_id: 5}
 ])

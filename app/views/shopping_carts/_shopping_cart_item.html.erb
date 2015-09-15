@@ -1,8 +1,18 @@
 <div>
 
  <% if shopping_cart_item.item %>
-   <div><%= shopping_cart_item.item.id %></div>
-   <div><%= shopping_cart_item.item.name %></div>
-   <div><%= shopping_cart_item.item.price %></div>
+ 
+   <div><b>book-id:</b>
+   	<%= shopping_cart_item.item.id %></div>
+   
+   <div><b>book-name:</b>
+   	<%= shopping_cart_item.item.name %></div>
+   
+   <div><b>book-price:</b>
+   	<%= shopping_cart_item.item.price %></div>
+   
+     <div><b>book-quantity:</b>
+     	<%= shopping_cart_item.quantity %></div>
   <% end %>
+  <br>
 </div>
