@@ -12,8 +12,10 @@ class ShoppingCartsController < ApplicationController
 
   def show
  @book = Book.find(params[:book_id])
+@user=current_user
+    @shopping_cart.add(@book, @book.price, @user)
+   # @itemss= @shopping_cart.shopping_cart_items
 
-    @shopping_cart.add(@book, @book.price)
     # redirect_to shopping_cart_path
   end
   def index
