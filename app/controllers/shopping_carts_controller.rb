@@ -2,12 +2,7 @@
 class ShoppingCartsController < ApplicationController
    attr_accessor :book_id
   before_filter :extract_shopping_cart
-  # def createee
-  #   @book = Book.find(params[:book_id])
-  #   @user=current_user
-  #   @shopping_cart.add(@book, @book.price, @user)
-  #   redirect_to shopping_cart_path
-  # end
+ 
 
   def show
 @book = Book.find(params[:book_id])
@@ -22,10 +17,7 @@ class ShoppingCartsController < ApplicationController
     @shopping_carts = ShoppingCart.all
   end
 
-def quantity
-  @s=params[:quantity]
 
-end
 
   private
   def extract_shopping_cart

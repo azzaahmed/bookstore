@@ -1,11 +1,13 @@
 
 <%= form_tag "/shopping_carts/show",:method => "get" do %>
-<p></p>
-<p>
-<%= label_tag :quantity, "Please enter value:" %> </br>
+
+  <div class="field" >
+<%= label_tag :quantity, "Quantity:" %> 
 <%= number_field_tag :quantity, '1' %>
+
 <%= hidden_field_tag "book_id", book_id %>
-</p>
+
 
 <%= submit_tag "Add to cart" %>
+</div>
 <% end %>

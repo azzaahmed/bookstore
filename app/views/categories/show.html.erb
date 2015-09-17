@@ -9,9 +9,12 @@
 <%= link_to 'Back', categories_path %>
   <ul>
          <li> <%= link_to "Home", {:controller => 'categories', :action => 'index'} %> </li>
+     </br>
        
     <% get_books.each do |book| %>
-        <li> <%= link_to book.name, book %> </li>
-     
+   <li> <%= link_to book.name, book %> <%= render 'shopping_carts/form', :book_id => book.id %> <%= link_to 'Show', book %> </li>
+       
+      </br>
+   
     <% end %>
    </ul>
