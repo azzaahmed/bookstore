@@ -30,9 +30,9 @@
         <td><%= book.author %></td>
         <td><%= book.category_id %></td>
         <td><%= book.image %></td>
-        
+
     <!--  Add to cart -->
-<td>  <%= render 'shopping_carts/form', :book_id => book.id %> </td>
+<td>  <%= render 'shopping_carts/form', :book_id => book.id , :a =>0 %> </td>
       
         <td><%= link_to 'Show', book %></td>  
         <% if can? :new, @book %>
