@@ -19,6 +19,10 @@
 
       <div><b>owner_type:</b>
       <%= shopping_cart_item.owner_type %></div>
+
+        <div><b>book total:</b>
+      <%= shopping_cart_item.price * shopping_cart_item.quantity %></div>
+      <p>  <%= render 'shopping_carts/form', :book_id => shopping_cart_item.item.id, :a => 1 %> </p>
   <% end %>
   <br>
 </div>

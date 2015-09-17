@@ -1,10 +1,11 @@
 User.create!([
-  {email: "a@a.com", encrypted_password: "$2a$10$.PZdD4qQf7Tr4xVw7FmMBeOrxs3T43unzhCpK5rkng6kKWw8hhfiC", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-09-15 18:32:05", last_sign_in_at: "2015-09-15 18:32:05", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: false},
-  {email: "a@ww.com", encrypted_password: "$2a$10$c9thWpxxVbrGvZKOYHU09eq4hIlmoAPtAC.WWfEqjVuB0UdO1I9MG", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-09-15 19:25:05", last_sign_in_at: "2015-09-15 19:25:05", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: false}
+  {email: "a@a.com", encrypted_password: "$2a$10$.PZdD4qQf7Tr4xVw7FmMBeOrxs3T43unzhCpK5rkng6kKWw8hhfiC", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 5, current_sign_in_at: "2015-09-17 10:22:19", last_sign_in_at: "2015-09-17 08:10:57", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: true},
+  {email: "a@ww.com", encrypted_password: "$2a$10$c9thWpxxVbrGvZKOYHU09eq4hIlmoAPtAC.WWfEqjVuB0UdO1I9MG", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-09-15 19:25:05", last_sign_in_at: "2015-09-15 19:25:05", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: false},
+  {email: "a@w.com", encrypted_password: "$2a$10$6i7fbxpQPgjd80m/enGga.c.K7IuPF9WHIJIH1hqOPCtaHZYWqNpO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 5, current_sign_in_at: "2015-09-17 11:14:36", last_sign_in_at: "2015-09-17 09:03:08", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: false},
+  {email: "ab@e.com", encrypted_password: "$2a$10$Pe7CCrDRSXxx3bleOVAlzu2R4AyQLrL3kB7vCmOBQkfIx/eNdsbPO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-09-16 20:41:10", last_sign_in_at: "2015-09-16 20:41:10", current_sign_in_ip: "::1", last_sign_in_ip: "::1", admin: false}
 ])
 Book.create!([
-  {price: nil, description: "", name: "", author: "", category_id: nil, image: "", active: true},
-  {price: 70, description: "Anyone who has read J.D. Salinger's New Yorker stories ? particularly A Perfect Day for Bananafish, Uncle Wiggily in Connecticut, The Laughing Man, and For Esme ? With Love and Squalor, will not be surprised by the fact that his first novel is fully of children. The hero-narrator of THE CATCHER IN THE RYE is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it. There are many voices in this novel: children's voices, adult voices, underground voices-but Holden's voice is the most eloquent of all. Transcending his own vernacular, yet remaining marvelously faithful to it, he issues a perfectly articulated cry of mixed pain and pleasure. However, like most lovers and clowns and poets of the higher orders, he keeps most of the pain to, and for, himself. The pleasure he gives away, or sets aside, with all his heart. It is there for the reader who can handle it to keep.", name: "The Catcher in the Rye", author: "J.D. Salinger", category_id: 1, image: "the catcher in the rye.jpg\r", active: true},
+  {price: 71, description: "Anyone who has read J.D. Salinger's New Yorker stories ? particularly A Perfect Day for Bananafish, Uncle Wiggily in Connecticut, The Laughing Man, and For Esme ? With Love and Squalor, will not be surprised by the fact that his first novel is fully of children. The hero-narrator of THE CATCHER IN THE RYE is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it. There are many voices in this novel: children's voices, adult voices, underground voices-but Holden's voice is the most eloquent of all. Transcending his own vernacular, yet remaining marvelously faithful to it, he issues a perfectly articulated cry of mixed pain and pleasure. However, like most lovers and clowns and poets of the higher orders, he keeps most of the pain to, and for, himself. The pleasure he gives away, or sets aside, with all his heart. It is there for the reader who can handle it to keep.", name: "The Catcher in the Rye", author: "J.D. Salinger", category_id: 1, image: "the catcher in the rye.jpg", active: true},
   {price: 90, description: "Brave new world is a novel with a science-fiction theme written by bestselling author, aldous huxley, and was first published in 1932 it is set in the far future, in 2540 ad and features a utopian view of the society at that time, with a lot of material dedicated to sleep learning, reproductive technology, and classical conditioning the title is derived from a line in shakespeare's the tempestthe book begins with a lengthy introduction, detailing the author's views of how he thinks the entire world will function in the far future, in a global society that he terms the world state the individual story only begins in the 7th chapter, where the reader is properly introduced to the story of bernard and lenina, two inhabitants of the world statebernard has a single friend in life, whose name is helmholtz watson bernard and lenina go on a holiday to new mexico where they meet john the savage and linda, both of whom have lived hard lives due to being ostracised by all the people they lived withit is decided that john and linda would accompany bernard and lenina back to the world state when they return, and the rest of brave new world covers the events that occur on their return journey the export edition of this book was published by rhuk in 2004, and is available as a paperback key features: brave new world is a science fiction novel that was first published in 1932brave new world is the story of a couple, namely bernard and lenina, and how their life changes after a holiday in new mexico", name: "Brave New World", author: "Aldous Huxley", category_id: 1, image: "brave new world.jpg\r", active: true},
   {price: 150, description: "Few writers have better captured the times they were writing in as well as Charles Dickens. Dickens' ability to observe and record human character and environment have placed him at the top table of English fiction writers alongside Shakespeare and Austen, and his titles are still as popular today as they were upon first publication. Charles Dickens was a sensation in his own time, his stories as popular upon publication as they are now, where he sits at the summit of English literature. His depictions of Victorian England, in particular, have become so engrained in common consciousness that they are considered as almost historical texts on the age. In this collection you will find the tale of Oliver Twist, the orphan who Dickens used as a vehicle to highlight the unfairness of the Poor Law and the treacherous conditions of London slum life. In Great Expectations we are introduced to a vast array of quirky and interesting characters - from Pip to Estella, Magwitch to Honest Joe - whilst getting a study on class division and personal relationships. The third novel, A Tale of Two Cities, transports us to revolutionary France, where events fascinated Dickens' social interests. The study of Dr Manette's readjustment to freedom from prison is a brilliant demonstration of the author's unrivalled talent for producing fiction of subtlety and depth.", name: "The Works of Charles Dickens: Oliver Twist, Great Expectations and A Tale of Two Cities Volume 1 (Classic Fiction)", author: " Charles Dickens", category_id: 1, image: "the works.jpg\r", active: true},
   {price: 85, description: "Written in 1948, 1984 was George Orwell’s chilling prophecy about the future. And while 1984 has come and gone, Orwell’s narrative is timelier than ever. 1984 presents a startling and haunting vision of the world, so powerful that it is completely convincing from start to finish. No one can deny the power of this novel, its hold on the imaginations of multiple generations of readers, or th", name: "1984 (Signet Classics)", author: "George Orwell", category_id: 1, image: "1984.jpg\r", active: true},
@@ -46,8 +47,7 @@ Book.create!([
   {price: 65, description: "Guy de Maupassant,This book was converted from its physical edition to the digital format by a community of volunteers. You may find it for free on the web. Purchase of the Kindle edition includes wireless delivery.", name: "Bel Ami", author: "Guy de Maupassant", category_id: 10, image: "bel ami.jpg\r", active: true},
   {price: 75, description: "Dan Brown, , ,As millions of readers around the globe have already discovered, ,is a reading experience unlike any other. Simultaneously lightning-paced, intelligent, and intricately layered with remarkable research and detail, Dan Brown's novel is…", name: "The Da Vinci code", author: "Dan Brown", category_id: 11, image: "the da vinci code.jpg\r", active: true},
   {price: 100, description: "Daniel Pennac,Que de tours et de malices chez cette «vilaine fille», toujours et tant aimée par son ami Ricardo, le «bon garçon». Ils se rencontrent pour la première fois au début des années cinquante, en pleine adolescence, dans l'un des quartiers les plus huppés de Lima, Miraflores. Joyeux, inconscients, ils font…", name: "Au bonheur des ogres", author: "Daniel Pennac", category_id: 10, image: "au bonheur.jpg\r", active: true},
-  {price: 55, description: "Victor Hugo,More commonly known as \"The Hunchback of Notre-Dame\", Victor Hugo's Romantic novel of dark passions and unrequited love, \"Notre-Dame de Paris\", is translated with an introduction by John Sturrock in \"Penguin Classics\". In the vaulted Gothic towers of Notre-Dame Cathedral lives Quasimodo, the hunchbacked bellringer. Mocked and shunned for his…", name: "Notre-Dame de Paris", author: "Victor Hugo", category_id: 10, image: "notre-dame de paris.jpg\r", active: true},
-  {price: 4, description: "j", name: "h", author: "nh", category_id: 5, image: "j", active: true}
+  {price: 55, description: "Victor Hugo,More commonly known as \"The Hunchback of Notre-Dame\", Victor Hugo's Romantic novel of dark passions and unrequited love, \"Notre-Dame de Paris\", is translated with an introduction by John Sturrock in \"Penguin Classics\". In the vaulted Gothic towers of Notre-Dame Cathedral lives Quasimodo, the hunchbacked bellringer. Mocked and shunned for his…", name: "Notre-Dame de Paris", author: "Victor Hugo", category_id: 10, image: "notre-dame de paris.jpg\r", active: true}
 ])
 Category.create!([
   {category_name: "classic"},
@@ -62,7 +62,23 @@ Category.create!([
   {category_name: "Cultural"},
   {category_name: "Thriller"}
 ])
+OrderItem.create!([
+  {book_id: 2, price: 70, user_id: 1, quantity: 1, total_price: "70.0"}
+])
 ShoppingCart.create!([
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
   {},
   {},
   {},
@@ -73,7 +89,49 @@ ShoppingCartItem.create!([
   {owner_id: nil, owner_type: nil, quantity: 4, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 1},
   {owner_id: nil, owner_type: nil, quantity: 2, item_id: 3, item_type: "Book", price: 90.0, shopping_cart_id: 1},
   {owner_id: nil, owner_type: nil, quantity: 1, item_id: 11, item_type: "Book", price: 150.0, shopping_cart_id: 1},
-  {owner_id: nil, owner_type: nil, quantity: 4, item_id: 4, item_type: "Book", price: 150.0, shopping_cart_id: 5},
+  {owner_id: nil, owner_type: nil, quantity: 13, item_id: 4, item_type: "Book", price: 150.0, shopping_cart_id: 5},
   {owner_id: nil, owner_type: nil, quantity: 1, item_id: 10, item_type: "Book", price: 55.0, shopping_cart_id: 5},
-  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 9, item_type: "Book", price: 80.0, shopping_cart_id: 5}
+  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 9, item_type: "Book", price: 80.0, shopping_cart_id: 5},
+  {owner_id: nil, owner_type: nil, quantity: 19, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 6},
+  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 5, item_type: "Book", price: 85.0, shopping_cart_id: 6},
+  {owner_id: nil, owner_type: nil, quantity: nil, item_id: 11, item_type: "Book", price: 150.0, shopping_cart_id: 6},
+  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 7},
+  {owner_id: nil, owner_type: nil, quantity: 2, item_id: 14, item_type: "Book", price: 80.0, shopping_cart_id: 7},
+  {owner_id: nil, owner_type: nil, quantity: 1, item_id: 15, item_type: "Book", price: 120.0, shopping_cart_id: 7},
+  {owner_id: nil, owner_type: nil, quantity: 9, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 8},
+  {owner_id: 3, owner_type: "User", quantity: 1, item_id: 3, item_type: "Book", price: 90.0, shopping_cart_id: 8},
+  {owner_id: 4, owner_type: "User", quantity: 15, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 9},
+  {owner_id: 4, owner_type: "User", quantity: 1, item_id: 8, item_type: "Book", price: 115.0, shopping_cart_id: 9},
+  {owner_id: 4, owner_type: "User", quantity: 1, item_id: 5, item_type: "Book", price: 85.0, shopping_cart_id: 9},
+  {owner_id: 4, owner_type: "User", quantity: nil, item_id: 41, item_type: "Book", price: 65.0, shopping_cart_id: 9},
+  {owner_id: 4, owner_type: "User", quantity: 4, item_id: 3, item_type: "Book", price: 90.0, shopping_cart_id: 9},
+  {owner_id: 1, owner_type: "User", quantity: 2, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 10},
+  {owner_id: 1, owner_type: "User", quantity: 3, item_id: 3, item_type: "Book", price: 90.0, shopping_cart_id: 10},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 21, item_type: "Book", price: 100.0, shopping_cart_id: 10},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 5, item_type: "Book", price: 85.0, shopping_cart_id: 10},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 38, item_type: "Book", price: 210.0, shopping_cart_id: 10},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 45, item_type: "Book", price: 4.0, shopping_cart_id: 10},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 10, item_type: "Book", price: 55.0, shopping_cart_id: 11},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 11},
+  {owner_id: 1, owner_type: "User", quantity: 3, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 12},
+  {owner_id: 1, owner_type: "User", quantity: 2, item_id: 5, item_type: "Book", price: 85.0, shopping_cart_id: 12},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 3, item_type: "Book", price: 90.0, shopping_cart_id: 12},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 7, item_type: "Book", price: 115.0, shopping_cart_id: 12},
+  {owner_id: 3, owner_type: "User", quantity: 228, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 13, item_id: 23, item_type: "Book", price: 85.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 1, item_id: 21, item_type: "Book", price: 100.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 9, item_id: 24, item_type: "Book", price: 200.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 124, item_id: 3, item_type: "Book", price: 90.0, shopping_cart_id: 16},
+  {owner_id: 1, owner_type: "User", quantity: 14, item_id: 2, item_type: "Book", price: 70.0, shopping_cart_id: 17},
+  {owner_id: 1, owner_type: "User", quantity: 2, item_id: 6, item_type: "Book", price: 85.0, shopping_cart_id: 17},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 9, item_type: "Book", price: 80.0, shopping_cart_id: 17},
+  {owner_id: 3, owner_type: "User", quantity: 5, item_id: 5, item_type: "Book", price: 85.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 8, item_id: 27, item_type: "Book", price: 70.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 2, item_id: 29, item_type: "Book", price: 75.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 1, item_id: 28, item_type: "Book", price: 100.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 2, item_id: 30, item_type: "Book", price: 60.0, shopping_cart_id: 16},
+  {owner_id: 1, owner_type: "User", quantity: 1, item_id: 26, item_type: "Book", price: 50.0, shopping_cart_id: 17},
+  {owner_id: 3, owner_type: "User", quantity: 1, item_id: 12, item_type: "Book", price: 105.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 1, item_id: 41, item_type: "Book", price: 65.0, shopping_cart_id: 16},
+  {owner_id: 3, owner_type: "User", quantity: 1, item_id: 2, item_type: "Book", price: 71.0, shopping_cart_id: 18}
 ])

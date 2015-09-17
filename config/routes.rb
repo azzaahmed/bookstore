@@ -26,7 +26,7 @@ end
   #   get 'products/:id' => 'catalog#view'
   get 'shopping_carts/show' => 'shopping_carts#show'
   get 'shopping_carts/quantity' => 'shopping_carts#quantity'
-
+  get 'shopping_carts/remove_item' => 'shopping_carts#remove_item'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

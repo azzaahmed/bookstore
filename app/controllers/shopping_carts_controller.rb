@@ -17,8 +17,10 @@ class ShoppingCartsController < ApplicationController
     @shopping_carts = ShoppingCart.all
   end
 
-
-
+ def remove_item
+   @shopping_cart.remove(@book, 1)
+  end
+  
   private
   def extract_shopping_cart
     shopping_cart_id = session[:shopping_cart_id]

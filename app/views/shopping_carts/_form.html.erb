@@ -3,11 +3,17 @@
 
   <div class="field" >
 <%= label_tag :quantity, "Quantity:" %> 
+ <% if a===0 %>
+<%= number_field_tag :quantity, '1', min: 1 %>
+<% else %>
 <%= number_field_tag :quantity, '1' %>
-
+<%end%>
 <%= hidden_field_tag "book_id", book_id %>
 
-
+<% if a===0 %>
 <%= submit_tag "Add to cart" %>
+<% else %>
+<%= submit_tag "update cart" %>
+<%end%>
 </div>
 <% end %>
