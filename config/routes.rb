@@ -10,10 +10,7 @@ resources :order_items
   resources :books do
      resources :order_items
      resources :cart end
-  # resource :cart, only: [:show]
-  # get 'cart/index' => 'cart#index'
-  # get 'cart/clear' => 'cart#clearCart'
-  # get 'cart/:id' => 'cart#add'
+ 
 
 devise_scope :user do
   get 'users/sign_out' => "devise/sessions#destroy"
@@ -27,6 +24,8 @@ end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'shopping_carts/show' => 'shopping_carts#show'
+  get 'shopping_carts/quantity' => 'shopping_carts#quantity'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
