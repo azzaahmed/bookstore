@@ -9,4 +9,10 @@
 
 </div>
 <%= link_to 'Back', root_path %>
-<%= link_to 'checkout',  {:controller => 'shopping_carts', :action => 'check'} %> %>
+<%= link_to 'checkout',  {:controller => 'shopping_carts', :action => 'check'} %> 
+
+
+<% @items=ShoppingCartItem.where(:checkout => true) %>
+ <% @items.each do |item| %>
+ <%= item.id %>
+   <%end%>

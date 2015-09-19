@@ -24,7 +24,8 @@ end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'shopping_carts/show' => 'shopping_carts#show'
+  post 'shopping_carts/:id' => 'shopping_carts#adddd'
+ 
   get 'shopping_carts/quantity' => 'shopping_carts#quantity'
     get 'shopping_carts/check' => 'shopping_carts#check'
   get 'shopping_carts/remove_item' => 'shopping_carts#remove_item'
