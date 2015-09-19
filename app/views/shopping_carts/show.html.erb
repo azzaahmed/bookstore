@@ -1,6 +1,6 @@
 <h1>Shopping Cart</h1>
 
-<%= render :partial => 'shopping_cart_item', :collection => @shopping_cart.shopping_cart_items %>
+<ul> <%= render :partial => 'shopping_cart_item', :collection => @shopping_cart.shopping_cart_items %> </ul>
 </br></br>
 <div>
   <div><b>SubTotal:</b><%= number_to_currency @shopping_cart.subtotal %></div>
@@ -10,9 +10,3 @@
 </div>
 <%= link_to 'Back', root_path %>
 <%= link_to 'checkout',  {:controller => 'shopping_carts', :action => 'check', :check_items  => @shopping_cart.shopping_cart_items.collect(&:id)} %> 
-<h1>ddd</h1>
-
-<% @items=ShoppingCartItem.where(:checkout => true) %>
- <% @items.each do |item| %>
- <%= item.id %>
-   <%end%>

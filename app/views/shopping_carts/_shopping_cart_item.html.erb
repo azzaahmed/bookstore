@@ -1,5 +1,6 @@
-<div>
 
+
+<li class="list" >
  <% if shopping_cart_item.item %>
  
    <div><b>book-id:</b>
@@ -24,9 +25,9 @@
         <div><b>book total:</b>
       <%= shopping_cart_item.price * shopping_cart_item.quantity %></div>
       <p>  <%= render 'shopping_carts/form', :book_id => shopping_cart_item.item.id, :a => 1 %> </p>
-      <%else %>
-      <h1>nnnnnnn</h1>
+     
   <% end %>
+ 
+</li>
+ 
 
-  <br>
-</div>

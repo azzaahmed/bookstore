@@ -12,7 +12,7 @@
      </br>
        
     <% get_books.each do |book| %>
-   <li> <%= link_to book.name, book %> <%= render 'shopping_carts/form', :book_id => book.id, :a =>0 %> <%= link_to 'Show', book %> </li>
+   <li class="list"> <%= link_to book.name, book %> <%= render 'shopping_carts/form', :book_id => book.id, :a =>0 %> <%= link_to 'Show', book %> </li>
        
       </br>
    

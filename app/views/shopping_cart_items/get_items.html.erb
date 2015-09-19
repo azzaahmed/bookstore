@@ -8,7 +8,7 @@
       <th> id</th>
       <th> name</th>
       <th> price when purchased</th>
-      <th> </th>
+      
       <th>current price</th>
       <th> quantity</th>
       <th colspan="3"></th>
@@ -27,9 +27,7 @@
            <td><%= book.item.price %></td>
             <td> <%= book.quantity %> </td>
 
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       
       </tr>
     <% end %>
   </tbody>

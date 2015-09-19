@@ -7,7 +7,11 @@ def adddd
   @book = Book.find(params[:book_id])
    @user=current_user
    @s=params[:quantity].to_i
-   @shopping_cart.add(@book, @book.price, @user, @s)
+   if params[:commit]==='remove'
+   @shopping_cart.add(@book, @book.price, @user, -@s)
+ else
+  @shopping_cart.add(@book, @book.price, @user, @s)
+ end
    redirect_to shopping_cart_path
 end
   def show
@@ -33,7 +37,10 @@ end
       a=ShoppingCartItem.find(item)
 a.checkout=true
 a.save
+
     end
+    @shopping_cart.clear
+    redirect_to root_path
   end
   
   private
