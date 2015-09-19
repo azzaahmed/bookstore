@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20150915145008) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "shopping_cart_id", limit: 4
+    t.boolean  "checkout"
   end
 
   add_index "shopping_cart_items", ["shopping_cart_id"], name: "index_shopping_cart_items_on_shopping_cart_id", using: :btree

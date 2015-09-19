@@ -1,7 +1,7 @@
 class ShoppingCart < ActiveRecord::Base
 acts_as_shopping_cart
 has_many :shopping_cart_items
-def add(object, price, user, quantity = 1, cumulative = true)
+def add(object, price, user, quantity = 1,checkout=false, cumulative = true)
           cart_item = item_for(object)
 
           if cart_item
@@ -10,7 +10,7 @@ def add(object, price, user, quantity = 1, cumulative = true)
             cart_item.save
             cart_item
           else
-            shopping_cart_items.create(item: object, price: price, owner: user, quantity: quantity)
+            shopping_cart_items.create(item: object, price: price, owner: user, quantity: quantity, checkout: checkout)
           end
  end
 end

@@ -20,6 +20,10 @@ class ShoppingCartsController < ApplicationController
  def remove_item
    @shopping_cart.remove(@book, 1)
   end
+
+  def check
+     render :partial => 'shopping_cart_item_checkout', :collection => @shopping_cart.shopping_cart_items
+  end
   
   private
   def extract_shopping_cart
