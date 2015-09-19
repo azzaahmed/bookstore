@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+ <% if @items.present? %>
 <h1>Listingitems</h1>
 
 <table>
@@ -34,3 +34,6 @@
 </table>
 
 <br>
+<%else%>
+ <p class="alert alert-danger" role="alert">No orders yet</p>
+<%end%>

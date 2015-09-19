@@ -15,6 +15,7 @@
    <img src=<%=image_path("1.jpg")%>  alt="Logo" class="navbar-form navbar-left" style="margin-left:-20px" />
       <ul class="nav navbar-nav navbar-right">
           <li> <%= link_to "Home", {:controller => 'categories', :action => 'index'} %> </li>
+     <li style="text-align:center; font-size:15px"> <%= link_to 'Your Orders' ,{:controller => 'shopping_cart_items', :action => 'get_items'}  %> </li>
        <%if signed_in?%>
     <li><%=link_to current_user.email, edit_user_registration_path%></li>
     <li><%=link_to "signout", destroy_user_session_path, method: :delete%></li>
@@ -31,8 +32,9 @@
  <% end %>
   
       </ul>
-    
+   
     </div><!-- /.navbar-collapse -->
+
   </div><!-- /.container-fluid -->
 </nav>
 

@@ -1,5 +1,31 @@
 <p id="notice"><%= notice %></p>
+ <body>
 
+    
+
+    <div class="container-fluid">
+      <div class="row" >
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+           
+      <%  @categoriess= Category.all %>
+       <% @categoriess.each do |category| %>
+      
+        <li><%= link_to category.category_name, category %></li>
+     
+    <% end %>
+          </ul>
+     
+          
+        </div>
+         <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 <p>
   <strong>Category name:</strong>
   <%= @category.category_name %>
@@ -7,14 +33,13 @@
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
-  <ul>
+  <ul >
+
          <li> <%= link_to "Home", {:controller => 'categories', :action => 'index'} %> </li>
      </br>
        
     <% get_books.each do |book| %>
-   <li class="list"> <%= link_to book.name, book %> <%= render 'shopping_carts/form', :book_id => book.id, :a =>0 %> <%= link_to 'Show', book %> </li>
-       
-      </br>
+   <li class="list"> <%= link_to book.name, book %> <%= render 'shopping_carts/form', :book_id => book.id, :a =>0 %> <%= link_to 'Show', book %> </li>  
    
     <% end %>
    </ul>
