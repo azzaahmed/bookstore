@@ -2,7 +2,7 @@ class ShoppingCartItemsController < ApplicationController
 
 def get_items
 
-  @items= ShoppingCartItem.where(:owner_id  => current_user.id)
-
+  @itemms= ShoppingCartItem.where(:owner_id  => current_user.id)
+@items=@itemms.where(:checkout => true)
   end
  end

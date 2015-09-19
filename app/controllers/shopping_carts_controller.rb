@@ -28,7 +28,12 @@ end
   end
 
   def check
-     render :partial => 'shopping_cart_item_checkout', :collection => @shopping_cart.shopping_cart_items
+    @item_ids=params[:check_items]
+    @item_ids.each do |item|
+      a=ShoppingCartItem.find(item)
+a.checkout=true
+a.save
+    end
   end
   
   private
@@ -36,6 +41,6 @@ end
     shopping_cart_id = session[:shopping_cart_id]
     @shopping_cart = session[:shopping_cart_id] ? ShoppingCart.find(shopping_cart_id) : ShoppingCart.create
     session[:shopping_cart_id] = @shopping_cart.id
-   
+
   end
 end

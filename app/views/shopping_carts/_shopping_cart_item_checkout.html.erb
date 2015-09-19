@@ -1,5 +1,10 @@
 
-<div> <%shopping_cart_item.checkout=true %></div>
-<h1>ff</h1>
 
-    
+<h1>ff</h1>
+<%= form_tag "/shopping_carts/check",:method => "post" do %>
+
+<%= hidden_field_tag :checkout, true %>
+
+
+<%= submit_tag "Add to cart" %>
+<% end %>
