@@ -3,25 +3,25 @@
 <li class="list" >
  <% if shopping_cart_item.item %>
  
-   <div><b>book-id:</b>
-   	<%= shopping_cart_item.item.id %></div>
+   <!-- <div><b>book-id:</b>
+   	<%= shopping_cart_item.item.id %></div> -->
    
-   <div><b>book-name:</b>
-   	<%= shopping_cart_item.item.name %></div>
+ <!--   <div><b>book-name:</b>
+   	<%= shopping_cart_item.item.name %></div> -->
    
    <div><b>book-price:</b>
    	<%= shopping_cart_item.item.price %></div>
-   
+    <div> <img src="/assets/<%=shopping_cart_item.item.image%>" width="150" height="150" /> </div>
      <div><b>book-quantity:</b>
      	<%= shopping_cart_item.quantity %></div>
 
-      <div><b>owner_id:</b>
+     <!--  <div><b>owner_id:</b>
       <%= shopping_cart_item.owner_id %></div>
 
       <div><b>owner_type:</b>
       <%= shopping_cart_item.owner_type %></div>
     <div><b>checke:</b>
-      <%= shopping_cart_item.checkout %></div>
+      <%= shopping_cart_item.checkout %></div> -->
         <div><b>book total:</b>
       <%= shopping_cart_item.price * shopping_cart_item.quantity %></div>
       <p>  <%= render 'shopping_carts/form', :book_id => shopping_cart_item.item.id, :a => 1 %> </p>

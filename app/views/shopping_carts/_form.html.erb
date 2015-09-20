@@ -2,18 +2,25 @@
 <%= form_tag "/shopping_carts/adddd",:method => "post" do %>
 
   <div class="field" >
-<%= label_tag :quantity, "Quantity:" %> 
+   <!-- <%= label_tag :quantity, "Quantity:" %>  -->
  
-<%= number_field_tag :quantity, '1', min: 1 %>
+
 
 <%= hidden_field_tag "book_id", book_id %>
 
 <% if a===0 %>
-<%= submit_tag "Add to cart" %>
+<div class="number_f">
+<%= number_field_tag :quantity, '1', min: 1 %>
+</div>
+<div class="cart">
+<%=  image_submit_tag("cart.png")%>
+</div>
 <% else %>
-<%= submit_tag "add" %>
+<%=  image_submit_tag("plus.png", {:name => "submit", :value => "add" })%>
+<%= number_field_tag :quantity, '1', min: 1 %>
+<%=  image_submit_tag("minus.png", {:name => "submit", :value => "remove" })%>
 
-<%= submit_tag "remove" %>
+
 <%end%>
 </div>
 <% end %>

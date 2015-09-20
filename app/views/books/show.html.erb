@@ -28,9 +28,20 @@
 <p>
   <strong>Image:</strong>
   <%= @book.image %>
+  
+  
+  <img src="/assets/<%=@book.image%>" />
+<!--    <%= link_to (image_tag @book.image),@book%> -->
+<!--    <img src= <%= image_path(@book.image)%> />
+ <img src=<%=image_path("point blanc.jpg")%> />
+ 
+ <%= image_tag (@book.image) %>
+ <%= image_tag @book.image %> -->
+
 </p>
 <% if can? :edit, @book %>
 <%= link_to 'Edit', edit_book_path(@book) %> 
 <% end %>
-<%= link_to 'Back', books_path %>
+<% @category=Category.find(@book.category_id) %>
+<%= link_to 'Back', @category %>
 <%= link_to 'New Order item', {:controller => 'order_items', :action => 'new', :book_id => @book.id }  %>
