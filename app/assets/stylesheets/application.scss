@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@media (min-width: 768px){
+.navbar-default {
+    background-color: transparent;
+    border-color: #e7e7e7;
+} 
+}
 .list {
 	display: inline-block;
 	 margin: 10px;
@@ -19,7 +25,7 @@
 }
 @media (min-width: 768px) {
   .sidebar {
-    
+    margin-top:60px;
     position: absolute;
     height:100%;
     top: 100px;
@@ -32,6 +38,7 @@
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
    
   }
+
 }
 
 /* Sidebar navigation */
@@ -40,11 +47,18 @@
   margin-right: -21px;/* 20px padding + 1px border */
   margin-bottom: 20px;
   margin-left: -20px;
+  width:190px;
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 30px;
 }
+.nav-sidebar > li > a:hover {
+background-color:yellow;
+  color: red;
+}
+
+
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
@@ -54,7 +68,8 @@
 
 body{
 	
-	background: #f5f5f5 url("2.jpg");
+	background: #f5f5f5 url("back3.jpg");
+	background-repeat: repeat-x;
 }
 .cart{
 margin-top:-40px;
@@ -69,3 +84,26 @@ margin-left:120px;
 margin-top:15px;
 
  }
+ .body2{
+	
+	background: #f5f5f5 url("back3.jpg");
+	background-repeat: repeat-x;
+}
+.renderp{
+	margin-left:50px;
+}
+
+
+.box.-radius-all {
+    border-radius: 10%;
+}
+
+.box {
+	margin-right: 60px;
+	float:right;
+    background-color: #ffcccc;
+    border: 9px solid #e1e8ed;
+    padding: 15px;
+    margin-bottom: 20px;
+    width:25%;
+}

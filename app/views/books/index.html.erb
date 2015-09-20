@@ -23,7 +23,7 @@
   <tbody >
     <% @books.each do |book| %>
       <tr>
-        <td><%= book.price %></td>
+        <td> <%= number_to_currency book.price , unit: "£"%></td>
        
         <td><%= book.name %></td>
       

@@ -13,4 +13,8 @@ def add(object, price, user, quantity = 1,checkout=false, cumulative = true)
             shopping_cart_items.create(item: object, price: price, owner: user, quantity: quantity, checkout: checkout)
           end
  end
+
+ def tax_pct
+   0
+  end
 end
