@@ -1,7 +1,7 @@
 
 class ShoppingCartsController < ApplicationController
    attr_accessor :book_id
-  before_filter :extract_shopping_cart
+  before_action :extract_shopping_cart
  
 def adddd
   @book = Book.find(params[:book_id])
@@ -13,24 +13,18 @@ def adddd
  else
   @shopping_cart.add(@book, @book.price, @user, @s)
  end
-   redirect_to shopping_cart_path
+    redirect_to Category.find(@book.category_id)
 end
-  def show
-   # @book = Book.find(params[:book_id])
-   # @user=current_user
-   # @s=params[:quantity].to_i
-   # @shopping_cart.add(@book, @book.price, @user, @s)
 
-    #  # redirect_to shopping_cart_path
+  def show
+ 
   end
 
   def index
     @shopping_carts = ShoppingCart.all
   end
 
- def remove_item
-   @shopping_cart.remove(@book, 1)
-  end
+ 
 
   def check
     @item_ids=params[:check_items]

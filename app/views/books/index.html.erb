@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 
-
-
  <% if @books.present? %>
  
 
@@ -10,6 +8,7 @@
  <% if can? :new, @book %>
 <%= link_to 'New Book', new_book_path %>
 <% end %>
+
 <table>
   <thead>
     <tr>
