@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% if ! current_user.admin?  %>
 <p>
   <strong>Price:</strong>
    <%= number_to_currency @book.price , unit: "£"%>
@@ -44,4 +44,43 @@
 <% end %>
 <% @category=Category.find(@book.category_id) %>
 <%= link_to 'Back', @category %>
-<%= link_to 'New Order item', {:controller => 'order_items', :action => 'new', :book_id => @book.id }  %>
+
+<%else%>
+</br></br></br></br></br>
+<p>
+  <strong>Price:</strong>
+   <%= number_to_currency @book.price , unit: "£"%>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @book.name %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @book.category_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @book.image %>
+
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> 
+
+<% @category=Category.find(@book.category_id) %>
+<%= link_to 'Back', @category %>
+
+<%end%>

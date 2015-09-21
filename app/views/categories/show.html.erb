@@ -1,4 +1,26 @@
 <p id="notice"><%= notice %></p>
+
+   <% if current_user.admin?  %>
+ </br></br></br></br></br>
+   <p>
+  <strong>Category name:</strong>
+  <%= @category.category_name %>
+</p>
+<ul >
+         
+     </br>
+ 
+    <% get_books.each do |book| %>
+   <li > 
+   <%= link_to 'Show', book %> <%= book.name %> 
+   <%= book.price %> </li>  
+    
+    <% end %>
+   </ul>
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+ 
+<%else%>
  <body class="body2">
 
     
@@ -26,15 +48,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
-<p>
-   <% if current_user.admin?  %>
-  <strong>Category name:</strong>
-  <%= @category.category_name %>
-</p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
-  <%end%>
   
   <ul style="margin-left:300px; margin-top:200px">
           <em><h1 style="margin-left:300px; margin-top:-150px;color:#5a7032">
@@ -49,3 +63,4 @@
    
     <% end %>
    </ul>
+    <%end%>

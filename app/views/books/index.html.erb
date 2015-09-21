@@ -7,7 +7,9 @@
  
 
 <h1>Listing Books</h1>
-
+ <% if can? :new, @book %>
+<%= link_to 'New Book', new_book_path %>
+<% end %>
 <table>
   <thead>
     <tr>
@@ -47,9 +49,7 @@
 </table>
 
 <br>
- <% if can? :new, @book %>
-<%= link_to 'New Book', new_book_path %>
-<% end %>
+
 <% else %>
   <p class="alert alert-danger" role="alert">There are no book name containing the term(s) <%= params[:search] %>.</p>
 <% end %>
