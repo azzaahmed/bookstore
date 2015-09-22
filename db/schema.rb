@@ -11,18 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915145008) do
+ActiveRecord::Schema.define(version: 20150922150146) do
 
   create_table "books", force: :cascade do |t|
-    t.integer  "price",       limit: 4
-    t.text     "description", limit: 65535
-    t.string   "name",        limit: 255
-    t.string   "author",      limit: 255
-    t.integer  "category_id", limit: 4
-    t.string   "image",       limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.integer  "price",               limit: 4
+    t.text     "description",         limit: 65535
+    t.string   "name",                limit: 255
+    t.string   "author",              limit: 255
+    t.integer  "category_id",         limit: 4
+    t.string   "image",               limit: 255
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.boolean  "active"
+    t.string   "imagee_file_name",    limit: 255
+    t.string   "imagee_content_type", limit: 255
+    t.integer  "imagee_file_size",    limit: 4
+    t.datetime "imagee_updated_at"
   end
 
   add_index "books", ["category_id"], name: "index_books_on_category_id", using: :btree

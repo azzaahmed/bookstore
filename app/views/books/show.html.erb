@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 <% if ! current_user.admin?  %>
 <div class="bookdiv">
+
+  <p>
+  
+   <%= image_tag @book.imagee.url(:medium) %>
+</p>
 <p>
   <strong>Price:</strong>
    <%= number_to_currency @book.price , unit: "£"%>
@@ -78,8 +83,12 @@
   <strong>Image:</strong>
   <%= @book.image %>
 
-</p>
 
+</p>
+  <p>
+  
+   <%= image_tag @book.imagee.url(:medium) %>
+</p>
 <%= link_to 'Edit', edit_book_path(@book) %> 
 
 <% @category=Category.find(@book.category_id) %>

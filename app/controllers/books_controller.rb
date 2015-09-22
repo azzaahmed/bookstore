@@ -77,6 +77,6 @@ load_and_authorize_resource
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:price, :description, :name, :author, :category_id, :image)
+      params.require(:book).permit(:price, :description, :name, :author, :category_id, :image, :imagee)
     end
 end
