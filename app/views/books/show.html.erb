@@ -4,7 +4,7 @@
 
   <p>
   
-   <%= image_tag @book.imagee.url(:medium) %>
+    <%= image_tag @book.imagee.url, :size => '200x200' %>
 </p>
 <p>
   <strong>Price:</strong>
@@ -35,8 +35,9 @@
 <p>
 
   
-  
+ <!--  
   <img src="/assets/<%=@book.image%>" width="200" height="200" />
+  -->
 <!--    <%= link_to (image_tag @book.image),@book%> -->
 <!--    <img src= <%= image_path(@book.image)%> />
  <img src=<%=image_path("point blanc.jpg")%> />
@@ -54,6 +55,7 @@
 
 <%else%>
 </br></br></br></br></br>
+  
 <p>
   <strong>Price:</strong>
    <%= number_to_currency @book.price , unit: "£"%>
@@ -87,7 +89,7 @@
 </p>
   <p>
   
-   <%= image_tag @book.imagee.url(:medium) %>
+   <%= image_tag @book.imagee.url, :size => '200x200' %>
 </p>
 <%= link_to 'Edit', edit_book_path(@book) %> 
 

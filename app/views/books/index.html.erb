@@ -30,7 +30,7 @@
       
       
 <!--         <td><%= book.image %></td> -->
-      <td>  <img src="/assets/<%=book.image%>" width="100" height="100" /> </td>
+      <td>   <%= image_tag book.imagee.url, :size => '100x100' %> </td>
 
     <!--  Add to cart -->
 <td>  <%= render 'shopping_carts/form', :book_id => book.id , :a =>0 %> </td>

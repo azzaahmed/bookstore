@@ -18,9 +18,9 @@
  <div style="margin-top:150px">
     <% @items.each do |book| %>
        <ul >
-       
-        <img src="/assets/<%=book.item.image%> " width="100" height="100"/>
-      
+       <%=  image_tag book.item.imagee.url, :size => '100x100'%>
+       <!--  <img src="/assets/<%=book.item.image%> " width="100" height="100"/>
+       -->
         <%= book.item.name %>
 
         <%= book.price %>

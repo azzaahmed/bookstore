@@ -12,7 +12,7 @@
    <div><b>Price:</b>
     <%= number_to_currency shopping_cart_item.item.price , unit: "£"%>
    	</div>
-    <div> <img src="/assets/<%=shopping_cart_item.item.image%>" width="150" height="150" /> </div>
+    <div> <%=  image_tag shopping_cart_item.item.imagee.url, :size => '150x150'%><!-- <img src="/assets/<%=shopping_cart_item.item.image%>" width="150" height="150" />  --></div>
      <div><b>book-quantity:</b>
      	<%= shopping_cart_item.quantity %></div>
 
