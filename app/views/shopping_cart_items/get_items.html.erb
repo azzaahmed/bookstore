@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
  <% if @items.present? %>
-<!-- <h1>Listingitems</h1> -->
+<h2 style="margin-left:300px; margin-top:-30px;color:#5a7032;text-decoration: underline">Orders List</h2>
 
 <!-- <table> -->
  <!--  <thead>
@@ -15,11 +15,11 @@
     </tr>
   </thead> -->
 
- <div style="margin-top:80px;margin-left:100px">
+ <div style="margin-top:80px;margin-left:250px">
   <ul >
     <% @items.each do |book| %>
        <li class="list2">
-       <%=  image_tag book.item.imagee.url, :size => '100x100'%>
+       <%=  image_tag book.item.imagee.url, :size => '150x150'%>
        <!--  <img src="/assets/<%=book.item.image%> " width="100" height="100"/>
        -->
      <p>   <%= book.item.name %>

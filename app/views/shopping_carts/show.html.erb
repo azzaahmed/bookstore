@@ -1,9 +1,12 @@
+<!-- 
+<%= link_to 'Back', root_path %>
+ -->
 
 <%if ! @shopping_cart.empty? %>
-	<h1 style="margin-left:300px; margin-top:10px;color:#5a7032">Shopping Cart</h1>
+	<h1 style="margin-left:300px; margin-bottom:20px;color:#5a7032">Shopping Cart</h1>
 	<div class="box -radius-all is-hidden-tablet-and-below">
   <div class="shopping-cart__checkout-primary">
-    <h3 class="t-heading -size-s -weight-normal">Your Cart Total</h3>
+    <h3 class="t-heading -size-s -weight-normal">Cart Total</h3>
     <h4 class="t-heading -size-xl h-spacing-below--small">
       <div>
  <!--  <div><b>SubTotal:</b><%= number_to_currency @shopping_cart.subtotal %></div>
@@ -18,11 +21,7 @@
   <%end%>
   </div>
 </div>
-<div style="margin-top:50px">
 
-<%= link_to 'Back', root_path %>
-
-</div>
  <ul class="renderp"> <%= render :partial => 'shopping_cart_item', :collection => @shopping_cart.shopping_cart_items %> </ul>
 
 </br></br>
