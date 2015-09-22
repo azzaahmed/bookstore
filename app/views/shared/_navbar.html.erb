@@ -6,7 +6,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
  
-  <!--  <img src=<%=image_path("1.jpg")%>  alt="Logo" class="navbar-form navbar-left" style="margin-left:-20px" /> -->
+ 
       <ul class="nav navbar-nav navbar-right">
           <li> <%= link_to "Home", {:controller => 'categories', :action => 'index'} %> </li>
      <li style="text-align:center; font-size:15px"> <%= link_to 'Your Orders' ,{:controller => 'shopping_cart_items', :action => 'get_items'}  %> </li>
@@ -25,11 +25,13 @@
    <%= submit_tag "Search" , :class => "btn btn-default"  %> 
   
  <% end %>
-  
+   
       </ul>
    
     </div><!-- /.navbar-collapse -->
 
   </div><!-- /.container-fluid -->
+
 </nav>
 
+ <img src=<%=image_path("77.png")%>  alt="Logo" style="margin-top:-55px" /> 
