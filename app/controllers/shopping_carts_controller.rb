@@ -10,10 +10,15 @@ def adddd
     # if params[:commit]==='remove'
    if params[:submit] === "remove"
    @shopping_cart.add(@book, @book.price, @user, -@s)
+   redirect_to shopping_cart_path
+ elsif params[:submit] === "add"
+      @shopping_cart.add(@book, @book.price, @user, @s)
+        redirect_to shopping_cart_path
  else
   @shopping_cart.add(@book, @book.price, @user, @s)
+  redirect_to Category.find(@book.category_id)
  end
-    redirect_to Category.find(@book.category_id)
+    
 end
 
   def show

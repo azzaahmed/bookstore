@@ -15,23 +15,25 @@
     </tr>
   </thead> -->
 
- <div style="margin-top:150px">
+ <div style="margin-top:80px;margin-left:100px">
+  <ul >
     <% @items.each do |book| %>
-       <ul >
+       <li class="list2">
        <%=  image_tag book.item.imagee.url, :size => '100x100'%>
        <!--  <img src="/assets/<%=book.item.image%> " width="100" height="100"/>
        -->
-        <%= book.item.name %>
+     <p>   <%= book.item.name %>
 
-        <%= book.price %>
+        <%= number_to_currency book.price , unit: "£"%> </p>
       
           
         <p>Quantity:  <%= book.quantity %> </p>
             
 </br>
-       
-     </ul>
+     </li>
     <% end %>
+
+     </ul>
   <div>
 <!-- </table> -->
 

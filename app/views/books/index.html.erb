@@ -12,12 +12,12 @@
 <table>
   <thead>
     <tr>
-      <th>Price</th>
+      <th></th>
   
-      <th>Name</th>
+      <th></th>
     
      <!--  <th>Image</th> -->
-      <th colspan="3"></th>
+    
     </tr>
   </thead>
 
@@ -26,23 +26,25 @@
       <tr>
         <td> <%= number_to_currency book.price , unit: "£"%></td>
        
-        <td><%= book.name %></td>
+        <td><%= link_to book.name, book %></td>
       
       
 <!--         <td><%= book.image %></td> -->
-      <td>   <%= image_tag book.imagee.url, :size => '100x100' %> </td>
-
+      <td>   <%= link_to (image_tag book.imagee.url, :size => '100x100'), book %>  </td>
+ <td> <%= render 'shopping_carts/form', :book_id => book.id , :a =>0 %> </td>
     <!--  Add to cart -->
-<td>  <%= render 'shopping_carts/form', :book_id => book.id , :a =>0 %> </td>
+
       
-        <td><%= link_to 'Show', book %></td>  
+       
         <% if can? :new, @book %>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
+ </tr>
+
         <% end %>
 
-      </tr>
+     
     <% end %>
   </tbody>
 </table>

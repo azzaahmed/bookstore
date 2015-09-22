@@ -3,9 +3,13 @@
 
 @media (min-width: 768px){
 .navbar-default {
+margin-top:10px;
     background-color: transparent;
-    border-color: #e7e7e7;
+  border-color: #e7e7e7; 
 } 
+}
+.navbar{
+  border: none;
 }
 .list {
 	display: inline-block;
@@ -14,6 +18,11 @@
 	
 }
 
+.list2{
+    display: inline-block;
+   margin: 10px;
+   width:550px;
+}
 
 /*
  * Sidebar
@@ -28,7 +37,7 @@
     margin-top:30px;
     position: absolute;
     height:100%;
-    top: 100px;
+    top: 113px;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -106,8 +115,13 @@ margin-top:15px;
 }
 
 .bookdiv {
-  margin-top:170px;
+  margin-top:5px;
+  margin-left:20px;
+  text-align:center;
+   color:#242c14;
+  font-weight: bold;
 }
+
 a{
   font-size:15px;
 }
@@ -147,3 +161,18 @@ form input[type='email'] {
   font-size: 20px;
   margin:5px;
  }
+td{
+  padding:5px;
+  padding-bottom:15px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+    font-size: 15px;
+font-weight: bold;
+}
+
+.strong{
+  color:black;
+  font-size:17px;
+}

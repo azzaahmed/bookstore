@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<% if ! current_user.admin?  %>
+
 <div class="bookdiv">
 
   <p>
@@ -7,29 +7,28 @@
     <%= image_tag @book.imagee.url, :size => '200x200' %>
 </p>
 <p>
-  <strong>Price:</strong>
+  <strong class="strong">Price:</strong>
    <%= number_to_currency @book.price , unit: "£"%>
 </p>
-
-<p>
-  <strong>Description:</strong>
-   <%= simple_format(@book.description) %>
+<div style="width:1200px; margin-left:100px">
+<p >
+    <%= simple_format(@book.description) %>
  
 </p>
-
+</div>
 <p>
-  <strong>Name:</strong>
+  <strong class="strong">Name:</strong>
   <%= @book.name %>
 </p>
 
 <p>
-  <strong>Author:</strong>
+  <strong class="strong">Author:</strong>
   <%= @book.author %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @book.category_id %>
+  <strong class="strong">Category:</strong>
+  <%= Category.find(@book.category_id).category_name %>
 </p>
 
 <p>
@@ -48,52 +47,9 @@
 </p>
 </div>
 <% if can? :edit, @book %>
-<%= link_to 'Edit', edit_book_path(@book) %> 
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <% end %>
 <% @category=Category.find(@book.category_id) %>
 <%= link_to 'Back', @category %>
 
-<%else%>
-</br></br></br></br></br>
-  
-<p>
-  <strong>Price:</strong>
-   <%= number_to_currency @book.price , unit: "£"%>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @book.name %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @book.category_id %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @book.image %>
-
-
-</p>
-  <p>
-  
-   <%= image_tag @book.imagee.url, :size => '200x200' %>
-</p>
-<%= link_to 'Edit', edit_book_path(@book) %> 
-
-<% @category=Category.find(@book.category_id) %>
-<%= link_to 'Back', @category %>
-
-<%end%>

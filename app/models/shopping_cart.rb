@@ -12,6 +12,9 @@ def add(object, price, user, quantity = 1,checkout=false, cumulative = true)
           else
             shopping_cart_items.create(item: object, price: price, owner: user, quantity: quantity, checkout: checkout)
           end
+          if quantity<1
+             cart_item.delete
+          end
  end
 
  def tax_pct
