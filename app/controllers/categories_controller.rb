@@ -20,6 +20,7 @@ load_and_authorize_resource
   # GET /categories/1
   # GET /categories/1.json
   def show
+    
   end
 
   # GET /categories/new

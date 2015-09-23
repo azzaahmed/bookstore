@@ -1,5 +1,6 @@
 
 class ShoppingCartsController < ApplicationController
+  before_action :authenticate_user!
    attr_accessor :book_id
   before_action :extract_shopping_cart
  
@@ -16,10 +17,12 @@ def adddd
         redirect_to shopping_cart_path
  else
   @shopping_cart.add(@book, @book.price, @user, @s)
+  flash[:notice] = "The book was successfully added."
   redirect_to Category.find(@book.category_id)
  end
     
 end
+
 
   def show
  

@@ -49,6 +49,7 @@
 <% if can? :edit, @book %>
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %> |
+ <%= render 'shopping_carts/form', :book_id => @book.id , :a =>0 %> 
 <% end %>
 <% @category=Category.find(@book.category_id) %>
 <%= link_to 'Back', @category %>

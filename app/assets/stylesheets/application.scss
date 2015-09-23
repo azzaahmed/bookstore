@@ -152,6 +152,13 @@ form input[type='email'] {
    margin:5px;
  }
 
+  form input[type='text'] {
+   width: 250px;
+   height: 40px;
+   padding: 10px;
+   margin:5px;
+ }
+
  form input[class='actionn'] {
    width: 250px;
    height: 40px;
@@ -175,4 +182,14 @@ font-weight: bold;
 .strong{
   color:black;
   font-size:17px;
+}
+.edit_form{
+  margin-left:30px;
+}
+.navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+    color: #555;
+}
+.navbar-default .navbar-nav > .open > a{
+  background-color: transparent;
 }
