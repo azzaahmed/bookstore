@@ -1,4 +1,5 @@
 class Book < ActiveRecord::Base
+	acts_as_votable
 	belongs_to :category
 	belongs_to :order_item
   default_scope { where(active: true) }

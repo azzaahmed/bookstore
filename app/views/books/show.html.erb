@@ -4,11 +4,19 @@
 
   <p>
   
-    <%= image_tag @book.imagee.url, :size => '200x200' %>
+    <%= image_tag @book.imagee.url, :size => '200x250' %>
+    <p>
+<%= link_to image_tag("up.png"), {:controller => 'books', :action => 'upvote'} %>
+  <%= @book.get_upvotes.size %> &nbsp;
+
+ <%= link_to image_tag("down.png"), {:controller => 'books', :action => 'downvote'} %>
+  <%= @book.get_downvotes.size %>
+
+</p>
 </p>
 <p>
   <strong class="strong">Price:</strong>
-   <%= number_to_currency @book.price , unit: "£"%>
+   <%= number_to_currency @book.price , unit: "L.E "%>
 </p>
 <div style="width:1200px; margin-left:100px">
 <p >

@@ -1,8 +1,20 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+before_action :authenticate_user! ,  only: [:upvote, :downvote]
+load_and_authorize_resource :except => [:upvote, :downvote]
 
-load_and_authorize_resource
-
+def upvote
+  @book = Book.find(params[:id])
+  @book.upvote_by current_user
+  redirect_to book_path
+end
+helper_method :upvote
+def downvote
+  @book = Book.find(params[:id])
+  @book.downvote_by current_user
+  redirect_to book_path
+end
+helper_method :downvote
 
    # GET /books
   # GET /books.json

@@ -24,7 +24,7 @@
   <tbody >
     <% @books.each do |book| %>
       <tr>
-        <td> <%= number_to_currency book.price , unit: "£"%></td>
+        <td> <%= number_to_currency book.price , unit: "L.E "%></td>
        
         <td><%= link_to book.name, book %></td>
       

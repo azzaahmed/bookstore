@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-resources :order_items
- resources :cart
+
   resources :shopping_cart_items
  resources :shopping_carts
  resources :shopping_cart
@@ -9,11 +8,12 @@ resources :order_items
   resources :categories 
   resources :books do
      resources :order_items
-     resources :cart end
+      end
  
 
 devise_scope :user do
   get 'users/sign_out' => "devise/sessions#destroy"
+   get 'users' => 'devise/registrations#new'
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -31,6 +31,10 @@ end
    get 'shopping_carts/check/:id' => 'shopping_carts#check'
   get 'shopping_carts/remove_item' => 'shopping_carts#remove_item'
    get 'shopping_cart_itemss/get_items' => 'shopping_cart_items#get_items'
+   get 'devise/categories' => 'categories#index'
+   get 'books/:id/upvote'  => 'books#upvote'
+get 'books/:id/downvote'  => 'books#downvote'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
