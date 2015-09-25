@@ -15,6 +15,7 @@
    <% if current_user.admin?  %>
    <li> <%=  link_to "Users", {:controller => 'users_admins', :action => 'index'} %> </li>
     <li> <%=  link_to "All books", {:controller => 'books', :action => 'index'} %> </li>
+     <li> <%=  link_to "All orders", {:controller => 'shopping_cart_items', :action => 'all_orders'} %> </li>
    <%end%>
    <li> <%=  link_to "MY Cart", {:controller => 'shopping_carts', :action => 'show'} %> </li>
   

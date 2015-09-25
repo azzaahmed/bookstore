@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 resources :users_admins
 
-  resources :shopping_cart_items
+  
  resources :shopping_carts
  resources :shopping_cart
    devise_for :users 
@@ -31,11 +31,12 @@ end
   get 'shopping_carts/quantity' => 'shopping_carts#quantity'
    
    get 'shopping_carts/check/:id' => 'shopping_carts#check'
-  get 'shopping_carts/remove_item' => 'shopping_carts#remove_item'
+   get 'shopping_carts/remove_item' => 'shopping_carts#remove_item'
    get 'shopping_cart_itemss/get_items' => 'shopping_cart_items#get_items'
    get 'devise/categories' => 'categories#index'
    get 'books/:id/upvote'  => 'books#upvote'
-get 'books/:id/downvote'  => 'books#downvote'
+   get 'books/:id/downvote'  => 'books#downvote'
+   get 'shopping_cart_items/all_orders' => 'shopping_cart_items#all_orders'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
