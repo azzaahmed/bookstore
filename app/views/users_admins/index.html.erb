@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users Admins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users_admins.each do |users_admin| %>
+      <tr>
+        <td><%= users_admin.firstname %>
+        <%= users_admin.lastname %></td>
+        <td><%= link_to 'Show', {:controller => "users_admins", :action => "show", :user_id => users_admin.id} %></td>
+     
+        <td><%= link_to 'Destroy',  {:controller => "users_admins", :action => "destroy", :user_id => users_admin.id}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

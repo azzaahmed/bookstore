@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>user email:</strong>
+  <%= @users_admin.email %>
+</p>
+ <p>
+  <strong>user sign_in_count:</strong>
+  <%= @users_admin.sign_in_count %>
+</p>
+ <p>
+  <strong>user last_sign_in_at:</strong>
+  <%= @users_admin.last_sign_in_at %>
+</p>
+ <p>
+  <strong>user current_sign_in_ip:</strong>
+  <%= @users_admin.current_sign_in_ip %>
+</p>
+<p>
+  <strong>user last_sign_in_ip:</strong>
+  <%= @users_admin.last_sign_in_ip %>
+</p>
+<p>
+  <strong>user created_at:</strong>
+  <%= @users_admin.created_at %>
+</p>
+<ul >
+         
+     </br>
+<%= link_to 'Back', {:controller => "users_admins", :action => "index"}  %>
