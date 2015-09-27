@@ -3,8 +3,8 @@
 
 @media (min-width: 768px){
 .navbar-default {
-margin-top:10px;
-    background-color: transparent;
+
+  background-color: #9e3350;
   border-color: #e7e7e7; 
 } 
 }
@@ -105,13 +105,13 @@ margin-top:15px;
 }
 
 .box {
-	margin-right: 60px;
-	float:right;
-    background-color: #ffcccc;
-    border: 9px solid #e1e8ed;
+	margin-left: 360px;
+
+    background-color: #fff0f2;
+    border: 7px solid #e1e8ed;
     padding: 15px;
     margin-bottom: 20px;
-    width:25%;
+    width:50%;
 }
 
 .bookdiv {
@@ -127,9 +127,18 @@ a{
 }
 .checkout{
   font-size:25px;
+  background-color:green;
+  width:18%;
+  padding:5px;
+  margin-bottom:10px;
+  border-radius:5%;
+
 }
 .checkout > a {
   font-size:25px;
+  color:white;
+  margin-left:2px;
+
 }
 .btn-default {
     color: white;
@@ -174,9 +183,9 @@ td{
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #777;
+    color: #F5F1F1;
     font-size: 15px;
-font-weight: bold;
+    font-weight: bold;
 }
 
 .strong{

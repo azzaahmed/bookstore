@@ -34,6 +34,7 @@ end
    get 'shopping_carts/remove_item' => 'shopping_carts#remove_item'
    get 'shopping_cart_itemss/get_items' => 'shopping_cart_items#get_items'
    get 'devise/categories' => 'categories#index'
+   get'devise/shopping_cart_items/get_items' => 'shopping_cart_items#get_items'
    get 'books/:id/upvote'  => 'books#upvote'
    get 'books/:id/downvote'  => 'books#downvote'
    get 'shopping_cart_items/all_orders' => 'shopping_cart_items#all_orders'

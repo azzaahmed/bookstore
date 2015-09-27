@@ -17,6 +17,10 @@ class UsersAdminsController < ApplicationController
   def destroy
     @users_admin = User.find(params[:user_id])
     @users_admin.destroy
+    items=ShoppingCartItem.where(:owner_id => params[:user_id])
+    items.each do |item|
+    item.destroy
+  end
     respond_to do |format|
       format.html { redirect_to users_admins_url, notice: 'User  was successfully destroyed.' }
       format.json { head :no_content }
