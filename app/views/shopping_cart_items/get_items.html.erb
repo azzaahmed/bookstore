@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%if notice %>
+<p id="notice" style="margin-top:10px;margin-left:20px;width:250px" class="alert alert-success" role="alert"><%= notice %></p>
+<%end%>
  <% if @items.present? %>
 <h2 style="margin-left:300px;color:#5a7032;text-decoration: underline">Orders List</h2>
 

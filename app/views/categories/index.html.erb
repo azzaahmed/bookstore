@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%if notice %>
+<p id="notice" style="margin-top:10px;margin-left:20px;width:250px" class="alert alert-success" role="alert"><%= notice %></p>
+<%end%>
 
 <%if signed_in?%>
  <% if current_user.admin?  %>

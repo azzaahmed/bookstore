@@ -38,6 +38,7 @@ end
    get 'books/:id/upvote'  => 'books#upvote'
    get 'books/:id/downvote'  => 'books#downvote'
    get 'shopping_cart_items/all_orders' => 'shopping_cart_items#all_orders'
+   get'devise/shopping_carts/show' =>'shopping_carts#show'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
