@@ -19,8 +19,7 @@
 </div>
     </h4>
     <%if @shopping_cart.total>0 %>
-      <div  class="checkout"><%= link_to 'Checkout',  {:controller => 'shopping_carts', :action => 'check', :check_items  => @shopping_cart.
-	shopping_cart_items.collect(&:id)} %> </div>
+      <div  class="checkout"><%= link_to 'Checkout',  {:controller => 'shopping_carts', :action => 'check', :check_items  => @shopping_cart.shopping_cart_items.collect(&:id)} %> </div>
   <%end%>
   </div>
 </div>
